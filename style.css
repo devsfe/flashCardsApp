@@ -77,10 +77,26 @@ body {
     min-height: 100vh;
     background-color: rgba(0,0,0, 0.2);
     display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }
 
 .add-card-container.active {
     display: flex;
+}
+
+.add-card-content {
+    width: 60%;
+    height: 70vh;
+    background-color: #fff;
+}
+
+.close-icon {
+    margin-left: 95%;
+    margin-top: 3%;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .card {
