@@ -25,6 +25,21 @@ body {
     height: 60vh;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 50%);
     display: flex;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+}
+
+.fa-arrow-left {
+    left: 3%;
+}
+
+.fa-arrow-right {
+    left: 95%;
 }
 
 .add-btn {
@@ -32,6 +47,7 @@ body {
     margin-left: 80%;
     margin-bottom: 5%;
     cursor: pointer;
+    outline: none;
     padding: 10px 20px;
     border: none;
     color: #fff;
