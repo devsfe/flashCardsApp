@@ -1,5 +1,7 @@
 const openBtn = document.getElementById('open-btn');
 const closeBtn = document.getElementById('close-btn');
+const nextBtn = document.getElementById('next-btn');
+const prevBtn = document.getElementById('prev-btn');
 const addCardForm = document.getElementById('form-add-card');
 const addCardContainer = document.getElementById('add-card-container');
 const cardContainer = document.getElementById('card-container');
@@ -34,7 +36,11 @@ function showCardsDom() {
         cardContainer.appendChild(cardElement);
         }
     });
+
+    console.log(cardArr.index);
 }
+
+// show next card
 
 // open add card container
 openBtn.addEventListener('click', () => {
