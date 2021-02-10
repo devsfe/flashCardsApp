@@ -28,7 +28,7 @@ body {
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 50%);
     display: flex;
     align-self: center;
-    position: relative;    
+    position: relative; 
 }
 
 .icon {
@@ -37,9 +37,10 @@ body {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 10px;
+    padding: 7px;
     border-radius: 50%;
     transition: ease 0.2s;
+    font-size: 14px;
 }
 
 .icon:hover {
@@ -47,11 +48,11 @@ body {
 }
 
 .fa-arrow-left {
-    left: 3%;
+    left: 22%;
 }
 
 .fa-arrow-right {
-    right: 3%;
+    right: 22%;
 }
 
 .add-btn {
@@ -100,7 +101,8 @@ body {
 }
 
 .card {
-    box-shadow: 0 3px 3px 3px rgb(0 0 0 / 50%);
+    box-shadow: 0px 0px 5px 3px rgba(120,172,255,0.32);
+    transition: ease 0.3s;
     width: 50%;
     height: 60vh;
     position: absolute;    
@@ -112,7 +114,11 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    display: none;
+    display: none; 
+}
+
+.card:hover {
+    transform: translate(0, -8px);
 }
 
 .card.active {
@@ -127,5 +133,21 @@ body {
 .card-answer {
     margin: 40px 0 0 0;
     font-size: 18px;
+}
+
+.show-answer-btn {
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    background-color: #0978ed;
+    transition: ease 0.1s;
+    width: 20%;
+    margin: 50px auto 0 auto;    
+}
+
+.show-answer-btn:hover {
+    background-color: #0264cc;    
 }
 
