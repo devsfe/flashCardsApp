@@ -6,6 +6,9 @@ const addCardForm = document.getElementById('form-add-card');
 const addCardContainer = document.getElementById('add-card-container');
 const cardContainer = document.getElementById('card-container');
 const cardArr = [];
+var currentCard = 0;
+const cardElementArr = [];
+
 
 
 // add new card
@@ -34,13 +37,23 @@ function showCardsDom() {
             <button class="show-answer-btn">Show answer</button>`
             
         cardContainer.appendChild(cardElement);
+        cardElementArr.push(cardElement);
         }
     });
 
-    console.log(cardArr.index);
+    cardElementArr[0].classList.add('active');
 }
 
 // show next card
+function showNextCard() {
+    
+    currentCard = currentCard + 1;
+
+    cardElementArr[currentCard].classList.add('active');
+
+    cardElementArr[currentCard - 1].classList.remove('active');
+
+}
 
 // open add card container
 openBtn.addEventListener('click', () => {
@@ -53,3 +66,4 @@ closeBtn.addEventListener('click', () => {
 });
 
 addCardForm.addEventListener('submit', addNewCard);
+nextBtn.addEventListener('click', showNextCard);
