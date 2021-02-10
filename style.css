@@ -79,6 +79,10 @@ body {
     display: none;
 }
 
+.add-card-container.active {
+    display: flex;
+}
+
 .card {
     box-shadow: 0 3px 3px 3px rgb(0 0 0 / 50%);
     width: 50%;
