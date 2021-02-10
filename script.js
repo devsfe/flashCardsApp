@@ -52,7 +52,16 @@ function showNextCard() {
     cardElementArr[currentCard].classList.add('active');
 
     cardElementArr[currentCard - 1].classList.remove('active');
+}
 
+// show prev card
+function showPrevCard() {
+
+    cardElementArr[currentCard].classList.remove('active');
+
+    currentCard = currentCard - 1;
+
+    cardElementArr[currentCard].classList.add('active');
 }
 
 // open add card container
@@ -67,3 +76,4 @@ closeBtn.addEventListener('click', () => {
 
 addCardForm.addEventListener('submit', addNewCard);
 nextBtn.addEventListener('click', showNextCard);
+prevBtn.addEventListener('click', showPrevCard);
