@@ -167,6 +167,11 @@ body {
 .card-answer {
     margin: 40px 0 0 0;
     font-size: 18px;
+    opacity: 0;
+}
+
+.card-answer.active {
+    opacity: 1;
 }
 
 .show-answer-btn {

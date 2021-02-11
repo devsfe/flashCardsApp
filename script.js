@@ -9,8 +9,6 @@ const cardArr = [];
 var currentCard = 0;
 const cardElementArr = [];
 
-
-
 // add new card
 function addNewCard(e) {
     e.preventDefault();
@@ -34,7 +32,7 @@ function showCardsDom() {
             `<p class="card-question">${card.question}</p>
             <hr>
             <p class="card-answer">${card.answer}</p>
-            <button class="show-answer-btn">Show answer</button>`
+            <button class="show-answer-btn" onclick="showAnswer(event)">Show answer</button>`
             
         cardContainer.appendChild(cardElement);
         cardElementArr.push(cardElement);
@@ -42,6 +40,13 @@ function showCardsDom() {
     });
 
     cardElementArr[0].classList.add('active');
+}
+
+// show answer
+function showAnswer(event) {
+    event.target.previousElementSibling.classList.add('active');
+
+    event.target.style.display = 'none';
 }
 
 // show next card
