@@ -78,7 +78,6 @@ function showAnswer(event) {
 }
 
 // hide btns
-
 function hideBtns() {
     // hide next btn
     if(cardElementArr.length == currentCard + 1) {

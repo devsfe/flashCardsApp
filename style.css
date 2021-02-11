@@ -60,7 +60,7 @@ body {
 .add-btn {
     align-self: flex-end;
     margin-left: 50%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     cursor: pointer;
     outline: none;
     padding: 10px 20px;
@@ -76,7 +76,7 @@ body {
 
 .clear-btn {
     align-self: flex-end;
-    position: absolute;
+    
     cursor: pointer;
     outline: none;
     padding: 10px 20px;
@@ -272,11 +272,25 @@ body {
         margin: 0 auto;
         
     }
-
+    
     .clear-btn {
         position: static;
         width: 90%;
         margin: 0 auto 15px auto;
+    }
+
+    .add-card-content,
+    .form-content input,
+    .add-card-btn {
+        width: 90%;
+    }
+
+    .show-answer-btn {
+        width: 50%;
+    }
+
+    .close-icon {
+        margin-left: 90%;
     }
 }
 
