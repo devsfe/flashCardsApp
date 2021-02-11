@@ -36,11 +36,12 @@ body {
     top: 40%;
     cursor: pointer;
     transition: ease 0.2s;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .icon:hover {
-    background-color: rgba(0, 0, 0, 0.9);    
+    transform: translate(-8px, 0);      
 }
 
 .fa-chevron-left {
@@ -151,6 +152,7 @@ body {
     flex-direction: column;
     text-align: center;
     display: none; 
+    animation: fade 0.4s ease;
 }
 
 .card.active {
@@ -179,6 +181,20 @@ body {
     margin: 0 auto;
 }
 
+.del-btn {
+    margin-left: 90%;
+    margin-bottom: 70%;
+    position: absolute;
+    font-size: 18px;
+    color: #fc0330;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+.del-btn:hover {
+    color: #db0028;
+}
+
 .show-answer-btn {
     cursor: pointer;
     outline: none;
@@ -194,5 +210,15 @@ body {
 
 .show-answer-btn:hover {
     background-color: #0264cc;    
+}
+
+@keyframes fade{
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
 }
 

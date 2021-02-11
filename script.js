@@ -33,7 +33,9 @@ function showCardsDom() {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.innerHTML = 
-            `<p class="card-question">${card.question}</p>
+            `
+            <i class="fas fa-trash del-btn"></i>
+            <p class="card-question">${card.question}</p>
             <hr class="card-hr">
             <p class="card-answer">${card.answer}</p>
             <button class="show-answer-btn" onclick="showAnswer(event)">Show answer</button>`
