@@ -40,6 +40,10 @@ body {
     padding: 10px;
 }
 
+.icon.hide {
+    display: none;
+}
+
 .icon:hover {
     transform: translate(-8px, 0);      
 }

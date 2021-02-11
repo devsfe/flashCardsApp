@@ -42,8 +42,6 @@ function showCardsDom() {
         cardContainer.appendChild(cardElement);
         cardElementArr.push(cardElement);
         totalCards++;
-        console.log(cardArr);
-        
     });
 
     if(cardElementArr[0]) {
@@ -79,9 +77,26 @@ function showAnswer(event) {
     event.target.style.display = 'none';
 }
 
+function hideBtns() {
+    // hide next btn
+    if(cardElementArr.length == currentCard + 1) {
+        nextBtn.classList.add('hide');
+    } else {
+        nextBtn.classList.remove('hide');
+    }
+
+
+    // hide prev btn
+    if(currentCard == 0) {
+        prevBtn.classList.add('hide');
+    } else {
+        prevBtn.classList.remove('hide');
+    }
+}
+
 // show next card
 function showNextCard() {
-    
+
     currentCard = currentCard + 1;
 
     cardElementArr[currentCard].classList.add('active');
@@ -89,6 +104,8 @@ function showNextCard() {
     cardElementArr[currentCard - 1].classList.remove('active');
 
     totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
+
+    hideBtns();
 }
 
 // show prev card
@@ -101,6 +118,11 @@ function showPrevCard() {
     cardElementArr[currentCard].classList.add('active');
 
     totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
+
+    console.log(cardElementArr);
+    console.log(currentCard + 1);
+
+    hideBtns();
 }
 
 // open add card container
