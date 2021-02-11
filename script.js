@@ -4,9 +4,12 @@ const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
 const addCardForm = document.getElementById('form-add-card');
 const addCardContainer = document.getElementById('add-card-container');
+const container = document.getElementById('container');
 const cardContainer = document.getElementById('card-container');
 const cardArr = [];
 var currentCard = 0;
+var totalCards = 0;
+var totalCardsParagraph = document.getElementById('total-cards');
 const cardElementArr = [];
 
 // add new card
@@ -36,10 +39,14 @@ function showCardsDom() {
             
         cardContainer.appendChild(cardElement);
         cardElementArr.push(cardElement);
+        alert('Card successfully added!');
+        totalCards++;
+        console.log(totalCards);
         }
     });
 
     cardElementArr[0].classList.add('active');
+    totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
 }
 
 // show answer
@@ -57,6 +64,8 @@ function showNextCard() {
     cardElementArr[currentCard].classList.add('active');
 
     cardElementArr[currentCard - 1].classList.remove('active');
+
+    totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
 }
 
 // show prev card
@@ -67,6 +76,8 @@ function showPrevCard() {
     currentCard = currentCard - 1;
 
     cardElementArr[currentCard].classList.add('active');
+
+    totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
 }
 
 // open add card container

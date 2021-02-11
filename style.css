@@ -68,6 +68,12 @@ body {
     transition: ease 0.1s;
 }
 
+.total-cards {
+    left: 49%;
+    top: 80%;
+    position: absolute;
+}
+
 .add-btn:hover {
     background-color: #0264cc;
 }
