@@ -54,7 +54,7 @@ body {
 
 .add-btn {
     align-self: flex-end;
-    margin-left: 60%;
+    margin-left: 50%;
     margin-bottom: 2%;
     cursor: pointer;
     outline: none;
@@ -65,14 +65,32 @@ body {
     transition: ease 0.1s;
 }
 
+.add-btn:hover {
+    background-color: #0264cc;
+}
+
+.clear-btn {
+    align-self: flex-end;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    left: 30%;
+    top: 90%;
+    background-color: #e80e36;
+    color: #fff;
+    transition: ease 0.2s;
+}
+
+.clear-btn:hover {
+    background-color: #d1042a;
+}
+
 .total-cards {
     left: 49%;
     top: 80%;
     position: absolute;
-}
-
-.add-btn:hover {
-    background-color: #0264cc;
 }
 
 .add-card-container {

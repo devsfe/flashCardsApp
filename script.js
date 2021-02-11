@@ -2,6 +2,7 @@ const openBtn = document.getElementById('open-btn');
 const closeBtn = document.getElementById('close-btn');
 const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
+const clearBtn = document.getElementById('clear-btn');
 const addCardForm = document.getElementById('form-add-card');
 const addCardContainer = document.getElementById('add-card-container');
 const container = document.getElementById('container');
@@ -34,7 +35,6 @@ function showCardsDom() {
         cardElement.classList.add('card');
         cardElement.innerHTML = 
             `
-            <i class="fas fa-trash del-btn"></i>
             <p class="card-question">${card.question}</p>
             <hr class="card-hr">
             <p class="card-answer">${card.answer}</p>
@@ -46,8 +46,12 @@ function showCardsDom() {
         
     });
 
-    cardElementArr[0].classList.add('active');
-    totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
+    if(cardElementArr[0]) {
+        cardElementArr[0].classList.add('active');
+        totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
+    } else {
+        totalCardsParagraph.innerText = `${currentCard}/${totalCards}`;
+    }
 }
 
 // set cards to local storage
@@ -61,6 +65,12 @@ function getCardsLocalStorage() {
     const cards = JSON.parse(localStorage.getItem('cards'));
     return cards === null ? [] : cards;
 }
+
+// clear all cards 
+clearBtn.addEventListener('click', () => {
+    localStorage.clear();
+    window.location.reload();console.log('teste');
+})
 
 // show answer
 function showAnswer(event) {
