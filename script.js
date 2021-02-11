@@ -34,7 +34,7 @@ function showCardsDom() {
         cardElement.classList.add('card');
         cardElement.innerHTML = 
             `<p class="card-question">${card.question}</p>
-            <hr>
+            <hr class="card-hr">
             <p class="card-answer">${card.answer}</p>
             <button class="show-answer-btn" onclick="showAnswer(event)">Show answer</button>`
         cardContainer.appendChild(cardElement);
