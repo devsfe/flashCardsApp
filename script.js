@@ -77,6 +77,8 @@ function showAnswer(event) {
     event.target.style.display = 'none';
 }
 
+// hide btns
+
 function hideBtns() {
     // hide next btn
     if(cardElementArr.length == currentCard + 1) {
