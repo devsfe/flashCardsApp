@@ -6,11 +6,13 @@ const addCardForm = document.getElementById('form-add-card');
 const addCardContainer = document.getElementById('add-card-container');
 const container = document.getElementById('container');
 const cardContainer = document.getElementById('card-container');
-const cardArr = [];
+const cardArr = getCardsLocalStorage();
 var currentCard = 0;
 var totalCards = 0;
 var totalCardsParagraph = document.getElementById('total-cards');
 const cardElementArr = [];
+
+showCardsDom();
 
 // add new card
 function addNewCard(e) {
@@ -21,14 +23,13 @@ function addNewCard(e) {
     const cardContent = {question, answer};
 
     cardArr.push(cardContent);
+    setCardsLocalStorage(cardArr);
 
-    showCardsDom();
 }
 
 // show cards in DOM
 function showCardsDom() {
-    cardArr.forEach((card, index, array) => {
-        if(index === array.length - 1) {
+    cardArr.forEach((card) => {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.innerHTML = 
@@ -36,17 +37,27 @@ function showCardsDom() {
             <hr>
             <p class="card-answer">${card.answer}</p>
             <button class="show-answer-btn" onclick="showAnswer(event)">Show answer</button>`
-            
         cardContainer.appendChild(cardElement);
         cardElementArr.push(cardElement);
-        alert('Card successfully added!');
         totalCards++;
-        console.log(totalCards);
-        }
+        console.log(cardArr);
+        
     });
 
     cardElementArr[0].classList.add('active');
     totalCardsParagraph.innerText = `${currentCard + 1}/${totalCards}`;
+}
+
+// set cards to local storage
+function setCardsLocalStorage(cards) {
+    localStorage.setItem('cards', JSON.stringify(cards));
+    window.location.reload();
+}
+
+// get cards from local storage
+function getCardsLocalStorage() {
+    const cards = JSON.parse(localStorage.getItem('cards'));
+    return cards === null ? [] : cards;
 }
 
 // show answer
