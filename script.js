@@ -38,7 +38,7 @@ function showCardsDom() {
             <p class="card-question">${card.question}</p>
             <hr class="card-hr">
             <p class="card-answer">${card.answer}</p>
-            <button class="btn show-answer-btn" onclick="showAnswer(event)">Show answer</button>`
+            <button class="btn btn-showAnswer" onclick="showAnswer(event)">Show answer</button>`
         cardContainer.appendChild(cardElement);
         cardElementArr.push(cardElement);
         totalCards++;

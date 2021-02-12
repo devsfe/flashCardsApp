@@ -20,7 +20,7 @@ body {
 }
 
 /* === Buttons === */
-.add-btn {
+.btn-add {
     align-self: flex-end;
     margin-left: 50%;
     margin-bottom: 3%;
@@ -29,11 +29,11 @@ body {
     background-color: #0978ed;
 }
 
-.add-btn:hover {
+.btn-add:hover {
     background-color: #0264cc;
 }
 
-.clear-btn {
+.btn-clear {
     align-self: flex-end;
     padding: 10px 20px;
     left: 30%;
@@ -42,36 +42,22 @@ body {
     color: #fff;
 }
 
-.clear-btn:hover {
+.btn-clear:hover {
     background-color: #d1042a;
 }
 
-.add-card-btn {
+.btn-addCards {
     width: 60%;
     padding: 20px;
     color: #fff;
     background-color: #0978ed;
 }
 
-.add-card-btn:hover {
+.btn-addCards:hover {
     background-color: #0264cc;   
 }
 
-.del-btn {
-    margin-left: 90%;
-    margin-bottom: 70%;
-    position: absolute;
-    font-size: 18px;
-    color: #fc0330;
-    cursor: pointer;
-    transition: ease 0.2s;
-}
-
-.del-btn:hover {
-    color: #db0028;
-}
-
-.show-answer-btn {
+.btn-showAnswer {
     padding: 10px 40px;
     text-align: center;
     color: #fff;
@@ -80,7 +66,7 @@ body {
     margin: 50px auto 0 auto;    
 }
 
-.show-answer-btn:hover {
+.btn-showAnswer:hover {
     background-color: #0264cc;    
 }
 
@@ -116,21 +102,13 @@ body {
     z-index: 99;
 }
 
-.icon.hide {
-    display: none;
-}
+.icon.hide {display: none;}
 
-.icon:hover {
-    transform: translate(-8px, 0);      
-}
+.icon:hover {transform: translate(-8px, 0);}
 
-.fa-chevron-left {
-    left: 25%;
-}
+.icon-left {left: 25%;}
 
-.fa-chevron-right {
-    right: 25%;
-}
+.icon-right {right: 25%;}
 
 .total-cards {
     left: 49%;
