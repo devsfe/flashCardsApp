@@ -267,6 +267,15 @@ body {
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        min-height: 100vh;
+    }
+
+    .icon-left {left: 4%;}
+
+    .icon-right {right: 4%;}
+
+    .form-content {
+        padding: 0 20px;
     }
 
     .add-btn {
