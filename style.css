@@ -135,6 +135,8 @@ body {
     width: 60%;
     height: 70vh;
     background-color: #fff;
+    animation: addCardAnimate .6s;
+    transition: ease-in;
 }
 
 .close-icon {
@@ -147,8 +149,8 @@ body {
 .form-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding: 0 60px;
 }
 
 .form-content label {
@@ -156,11 +158,29 @@ body {
 }
 
 .form-content input {
-    width: 60%;
-    padding: 40px;
-    margin: 0 0 8px 0;
-    border: solid 1px #000;
+    display: block;
+    width: 80%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: #99A3BA;
+    border: 1px solid #CDD9ED;
+    background: #fff;
+    transition: border .3s ease;
+    margin: 0 0 10px 0;
+}
+
+.form-content input::placeholder {
+    color: #CBD1DC;
+}
+
+.form-content input:focus {
     outline: none;
+    border-color: #275EFE;
 }
 
 .card {
@@ -214,6 +234,16 @@ body {
     100% {
         opacity: 1;
         transform: opacity linear;
+    }
+}
+
+@keyframes addCardAnimate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 
