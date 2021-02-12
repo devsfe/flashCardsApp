@@ -47,8 +47,8 @@ body {
 }
 
 .btn-addCards {
-    width: 60%;
-    padding: 20px;
+    width: 80%;
+    padding: 16px;
     color: #fff;
     background-color: #0978ed;
 }
@@ -278,25 +278,24 @@ body {
         padding: 0 20px;
     }
 
-    .add-btn {
+    .btn-add {
         width: 90%;
-        margin: 0 auto;
-        
+        margin: 0 auto;   
     }
-    
-    .clear-btn {
+
+    .btn-clear {
         position: static;
         width: 90%;
-        margin: 0 auto 15px auto;
+        margin: 0 auto 8px auto;
     }
 
     .add-card-content,
     .form-content input,
-    .add-card-btn {
+    .btn-addCards {
         width: 90%;
     }
 
-    .show-answer-btn {
+    .btn-showAnswer {
         width: 50%;
     }
 
