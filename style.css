@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* === Global === */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,80 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* === Reusable Classes === */
+.btn {
+    cursor: pointer;
+    outline: none;  
+    border: none;  
+    transition: ease 0.2s;
+}
+
+/* === Buttons === */
+.add-btn {
+    align-self: flex-end;
+    margin-left: 50%;
+    margin-bottom: 3%;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0978ed;
+}
+
+.add-btn:hover {
+    background-color: #0264cc;
+}
+
+.clear-btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    left: 30%;
+    top: 90%;
+    background-color: #e80e36;
+    color: #fff;
+}
+
+.clear-btn:hover {
+    background-color: #d1042a;
+}
+
+.add-card-btn {
+    width: 60%;
+    padding: 20px;
+    color: #fff;
+    background-color: #0978ed;
+}
+
+.add-card-btn:hover {
+    background-color: #0264cc;   
+}
+
+.del-btn {
+    margin-left: 90%;
+    margin-bottom: 70%;
+    position: absolute;
+    font-size: 18px;
+    color: #fc0330;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+.del-btn:hover {
+    color: #db0028;
+}
+
+.show-answer-btn {
+    padding: 10px 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #0978ed;
+    width: 30%;
+    margin: 50px auto 0 auto;    
+}
+
+.show-answer-btn:hover {
+    background-color: #0264cc;    
+}
+
+/* === General Styling === */
 .title {
     margin: 0 0 15px 0;
 }
@@ -55,41 +130,6 @@ body {
 
 .fa-chevron-right {
     right: 25%;
-}
-
-.add-btn {
-    align-self: flex-end;
-    margin-left: 50%;
-    margin-bottom: 3%;
-    cursor: pointer;
-    outline: none;
-    padding: 10px 20px;
-    border: none;
-    color: #fff;
-    background-color: #0978ed;
-    transition: ease 0.1s;
-}
-
-.add-btn:hover {
-    background-color: #0264cc;
-}
-
-.clear-btn {
-    align-self: flex-end;
-    
-    cursor: pointer;
-    outline: none;
-    padding: 10px 20px;
-    border: none;
-    left: 30%;
-    top: 90%;
-    background-color: #e80e36;
-    color: #fff;
-    transition: ease 0.2s;
-}
-
-.clear-btn:hover {
-    background-color: #d1042a;
 }
 
 .total-cards {
@@ -145,21 +185,6 @@ body {
     outline: none;
 }
 
-.add-card-btn {
-    width: 60%;
-    cursor: pointer;
-    outline: none;
-    padding: 20px;
-    border: none;
-    color: #fff;
-    background-color: #0978ed;
-    transition: ease 0.2s;
-}
-
-.add-card-btn:hover {
-    background-color: #0264cc;   
-}
-
 .card {
     box-shadow: 0px 0px 5px 3px rgba(120,172,255,0.32);
     transition: ease 0.3s;
@@ -202,37 +227,6 @@ body {
 .card-hr {
     width: 80%;
     margin: 0 auto;
-}
-
-.del-btn {
-    margin-left: 90%;
-    margin-bottom: 70%;
-    position: absolute;
-    font-size: 18px;
-    color: #fc0330;
-    cursor: pointer;
-    transition: ease 0.2s;
-}
-
-.del-btn:hover {
-    color: #db0028;
-}
-
-.show-answer-btn {
-    cursor: pointer;
-    outline: none;
-    padding: 10px 40px;
-    text-align: center;
-    border: none;
-    color: #fff;
-    background-color: #0978ed;
-    transition: ease 0.1s;
-    width: 30%;
-    margin: 50px auto 0 auto;    
-}
-
-.show-answer-btn:hover {
-    background-color: #0264cc;    
 }
 
 @keyframes fade{
