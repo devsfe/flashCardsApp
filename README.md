@@ -21,7 +21,7 @@
 <br>
 <h2>⚙️ Installation</h2>
 <hr>
-<p>Type <pre><code>https://github.com/devsfer1/flashCardsApp</code></pre> in your terminal</p>
+<p>Type <pre><code>$ git clone https://github.com/devsfer1/flashCardsApp</code></pre> in your terminal</p>
 <br>
 <h2>Links</h2>
 <hr>
